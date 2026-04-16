@@ -4,6 +4,7 @@ import java.util.Scanner;
 // to run this script you need to use the command $ javac filename.java
 // a new compiled file will be created and can be used with command $ java filename
 
+
 class HelloWorld {
     public static void main (String[] args) {
 

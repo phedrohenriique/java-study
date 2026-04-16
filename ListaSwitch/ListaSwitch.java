@@ -1,6 +1,7 @@
 import java.io.*;
 import java.util.Scanner;
 
+
 // import java.text.DecimalFormat;
 // import java.util.Scanner;
 
@@ -11,9 +12,12 @@ class ListaSwitch {
     public static void main(String[] args) {
 
         // System.out.println("Hello World");
-        ExerciseOne();
+        // ExerciseOne();
+        ExercicseFour();
 
     }
+
+    
 
     public static void ExerciseOne() {
 
@@ -59,4 +63,55 @@ class ListaSwitch {
     public static void ExerciseTwo(){
         
     }
+
+    public static void ExercicseFour() {
+
+        System.out.println("Choose the  first number");
+        Scanner sc1 = new Scanner(System.in); // num 2
+        double numOne = sc1.nextDouble();
+
+
+        System.out.println("Choose the operation, +, -, *, /");
+        Scanner sc2 = new Scanner(System.in); // signal
+        char signal = sc2.next().charAt(0);
+
+        System.out.println("Choose the second Number");
+        Scanner sc3 = new Scanner(System.in); // num 2
+        double numTwo = sc3.nextDouble();
+
+        
+        double result;
+        
+
+        switch (signal) {
+        case '+':
+            result = numOne + numTwo;
+            System.out.println("the result is :");
+            System.out.print(result);
+            break;
+            
+        case '-':
+            result = numOne - numTwo;
+            System.out.println("the result is :");
+            System.out.print(result);
+            break;
+
+        case '*':
+            result = numOne * numTwo;
+            System.out.println("the result is :");
+            System.out.print(result);
+            break;
+        case '/':
+            result = numOne / numTwo;
+            System.out.println("the result is :");
+            System.out.print(result);
+            break;    
+
+        default:
+        System.out.println("you did not choose a proper signal");
+        }
+
+
+    }
+
 }
