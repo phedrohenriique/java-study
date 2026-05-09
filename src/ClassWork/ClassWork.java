@@ -15,6 +15,7 @@ public class ClassWork {
         System.out.println(" GAME STARTED ");
         System.out.println(" PLAYER 1 = X ");
         System.out.println(" PLAYER 2 = O " + "\n");
+        game.showInformation();
 
         while (true) {
 
@@ -24,16 +25,20 @@ public class ClassWork {
 
             System.out.println(" PLAYER 1 MOVE ");
             System.out.println(" CHOOSE ROW AND COLUMN ");
-
+            
+            System.out.println(" CHOOSE ROW ");
             Scanner scr1 = new Scanner(System.in);
             int r1 = scr1.nextInt();
+            System.out.println(" CHOOSE COLUMN ");
             Scanner scc1 = new Scanner(System.in);
             int c1 = scc1.nextInt();
 
             while (game.checkMove(r1, c1) == false) {
                 System.out.println(" PLAYER 1 AGAIN ");
+                System.out.println(" CHOOSE ROW ");
                 scr1 = new Scanner(System.in);
                 r1 = scr1.nextInt();
+                System.out.println(" CHOOSE COLUMN ");
                 scc1 = new Scanner(System.in);
                 c1 = scc1.nextInt();
             }
@@ -50,15 +55,19 @@ public class ClassWork {
             System.out.println(" PLAYER 2 MOVE ");
             System.out.println(" CHOOSE ROW AND COLUMN ");
 
+            System.out.println(" CHOOSE ROW ");
             Scanner scr2 = new Scanner(System.in);
             int r2 = scr2.nextInt();
+            System.out.println(" CHOOSE COLUMN ");
             Scanner scc2 = new Scanner(System.in);
             int c2 = scc2.nextInt();
 
             while (game.checkMove(r2, c2) == false) {
                 System.out.println(" PLAYER 2 AGAIN ");
+                System.out.println(" CHOOSE ROW ");
                 scr2 = new Scanner(System.in);
                 r2 = scr1.nextInt();
+                System.out.println(" CHOOSE COLUMN ");
                 scc2 = new Scanner(System.in);
                 c2 = scc2.nextInt();
             }
@@ -89,7 +98,7 @@ public class ClassWork {
 
         public boolean checkMove(int r, int c) {
 
-            if (r >= 0 || r < rowsBoardGrid || 0 <= c || c < colsBoardGrid) {
+            if (r < 0 || r > rowsBoardGrid || 0 > c || c > colsBoardGrid) {
                 System.out.println("CHOOSE ROWS BETWEEN : " + 0 + " OR " + rowsBoardGrid);
                 System.out.println("CHOOSE COLS BETWEEN : " + 0 + " OR " + colsBoardGrid);
                 return false;
@@ -163,6 +172,19 @@ public class ClassWork {
                 return true;
             }
 
+            // draw logic
+            // needs to play until the end
+
+            if (
+                boardGrid[0][0] != " " && boardGrid[0][1] != " " && boardGrid[0][2] != " " &&
+                boardGrid[1][0] != " " && boardGrid[1][1] != " " && boardGrid[1][2] != " " &&
+                boardGrid[2][0] != " " && boardGrid[2][1] != " " && boardGrid[2][2] != " ") {
+                    
+                System.out.println(" GAME IS A DRAW");
+                return true;
+            }
+
+
             return false;
 
         }
@@ -180,6 +202,15 @@ public class ClassWork {
             System.out.println("\n" + boardGrid[0][0] + " | " + boardGrid[0][1] + " | " + boardGrid[0][2]);
             System.out.println(boardGrid[1][0] + " | " + boardGrid[1][1] + " | " + boardGrid[1][2]);
             System.out.println(boardGrid[2][0] + " | " + boardGrid[2][1] + " | " + boardGrid[2][2] + "\n");
+        }
+
+        public void showInformation(){
+            System.out.println("THIS IS THE GAME GRID");
+            System.out.println("CHOOSE ROWS AND COLUMNS TO PLAY");
+            showGameBoard();
+            System.out.println("\n" + 0+0 + " | " + 0+1 + " | " + 0+2);
+            System.out.println("\n" + 1+0 + " | " + 1+1 + " | " + 1+2);
+            System.out.println("\n" + 2+0 + " | " + 2+1 + " | " + 2+2 + "\n");
         }
 
     }
