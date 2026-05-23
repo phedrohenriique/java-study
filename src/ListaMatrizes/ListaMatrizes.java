@@ -1,5 +1,8 @@
 package ListaMatrizes;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 import java.util.Scanner;
 
 public class ListaMatrizes {
@@ -9,16 +12,26 @@ public class ListaMatrizes {
         // System.out.println("works");
         // Exercicio2(); // static function shall recieve static methods
         // Exercicio3();
-        // Exercicio4()
+        // Exercicio4();
 
-        int[][] matrixA = {
-            {1,1}
+        int[][] matrixA = { // A3x2
+                { 12, 1 },
+                { 1, 1 },
+                { 1, 1 }
         };
-        int[][] matrixB = {
-            {3,2}
+        int[][] matrixB = { // B2x3
+                { 1, 2, 3 },
+                { 1, 2, 3 }
         };
 
-        // int[][] matrixC = MatrixMultiplication(matrixA, matrixB)
+        // result c
+        // int[][] matrixC = {
+        // { 6, 6, 6 },
+        // { 6, 6, 6 },
+        // { 6, 6, 6 }
+        // };
+
+        Exercicio5(matrixA, matrixB);
 
     }
 
@@ -116,43 +129,28 @@ public class ListaMatrizes {
 
     }
 
-    // public static int[][] MatrixMultiplication(int[][] m1, int m2[][]) {
+    public static void Exercicio5(int[][] m1, int[][] m2) {
 
-    //     // A(mxn) X B(nxp) = C(mxp)
+        // matrix trespassing can not have optimization
 
-    //     int rowA = m1.length;
-    //     int colA = m1[0].length;
+        int rows = m1.length;
+        int cols = m2[0].length;
 
-    //     int rowB = m2.length;
-    //     int colB = m2[0].length;
+        int[][] m3 = new int[rows][cols];
 
-    //     int[][] matrixC = new int[rowA][colB];
+        // List<Integer> results = new ArrayList<>();
+        // for (Integer r : results) {
+        // System.out.println(r);
+        // }
 
-    //     if (m1[0].length != m2.length) {
-    //         // check failure
-    //         matrixC = new int[1][1];
-    //         return matrixC;
-    //     }
+        int k = 1;
 
-    //     // check sum logic
+        for (int r = 0; r < rows; r++) {
+            for (int c = 0; c < cols; c++) {
 
-    //     for (int ia = 0; ia < m1.length; ia++) {
-    //         for (int jb = 0; jb < m1[0].length; jb++) {
+            }
+        }
 
-    //             matrixC[ia][jb] = 0;
-                
-    //         }
-    //     }
-
-    //     for (int ib = 0; ib < m2.length; ib++) {
-    //         for (int jb = 0; jb < m2[0].length; jb++) {
-
-
-    //         }
-    //     }
-
-    //     return matrixC;
-
-    // }
+    }
 
 }
