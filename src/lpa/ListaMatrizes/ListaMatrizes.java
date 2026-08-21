@@ -31,7 +31,9 @@ public class ListaMatrizes {
         // { 6, 6, 6 }
         // };
 
-        Exercicio5(matrixA, matrixB);
+        // Exercicio5(matrixA, matrixB);
+
+        Desafio();
 
     }
 
@@ -132,6 +134,7 @@ public class ListaMatrizes {
     public static void Exercicio5(int[][] m1, int[][] m2) {
 
         // matrix trespassing can not have optimization
+        //
 
         int rows = m1.length;
         int cols = m2[0].length;
@@ -149,6 +152,55 @@ public class ListaMatrizes {
             for (int c = 0; c < cols; c++) {
 
             }
+        }
+
+    }
+
+    public static void Desafio() {
+
+        int[] v1 = { 1, 2, 25, 29, 32 };
+        int[] v2 = { 4, 6, 8, 10, 11 };
+        int[] v3 = new int[v1.length + v2.length];
+
+        int i = 0;
+        int j = 0;
+        int k = 0;
+
+        while (k <= v3.length - 1) {
+
+            // if (i >= v1.length || j >= v2.length ){
+            //     break;
+            // }
+
+            if (i > j && i == v1.length && j < v2.length){
+                v3[k] = v2[j];
+                j++;
+                k++;
+                continue;
+            }
+
+            if (j > i && j == v2.length && i < v1.length){
+                v3[k] = v1[i];
+                i++;
+                k++;
+                continue;
+            }
+
+            if (v1[i] < v2[j]) {
+                v3[k] = v1[i];
+                i++;
+                k++;
+                continue;
+            }
+
+            v3[k] = v2[j];
+            j++;
+            k++;
+
+        }
+
+        for (Integer n : v3) {
+            System.out.println(n);
         }
 
     }
