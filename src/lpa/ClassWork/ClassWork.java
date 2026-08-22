@@ -3,7 +3,7 @@
 // $ java --enable-preview folder/file.java
 // only 1 public class per file is the best java structure
 
-package ClassWork;
+package lpa.ClassWork;
 
 // import java.util.Arrays;
 import java.util.Scanner;

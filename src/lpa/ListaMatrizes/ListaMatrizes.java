@@ -1,4 +1,4 @@
-package ListaMatrizes;
+package lpa.ListaMatrizes;
 
 import java.util.ArrayList;
 import java.util.Arrays;

@@ -1,4 +1,4 @@
-package ListaVetores;
+package lpa.ListaVetores;
 
 // arrays need to have a defined length
 // need to use array list class

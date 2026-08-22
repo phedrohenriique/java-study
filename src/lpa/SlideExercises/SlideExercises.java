@@ -1,4 +1,4 @@
-package SlideExercises;
+package lpa.SlideExercises;
 import java.io.*;
 
 class SlideExercises {
