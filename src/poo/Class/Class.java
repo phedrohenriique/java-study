@@ -1,7 +1,7 @@
 package poo.Class;
 
 import java.util.Scanner;
-import poo.Entities.Rectangle;
+import poo.Entities.*;
 
 public class Class {
 
@@ -17,12 +17,22 @@ public class Class {
 
     public static void main(String[] args) {
         // ClassWork28082026();
-
+        // FrontEnd();
+        ActivityDSA();
 
     }; // simplified version for JDK 21+
 
-    public static void FrontEnd(){
-        
+    public static void FrontEnd() {
+        System.out.println("create a rectangle");
+        System.err.println("choose length");
+        Scanner sc1 = new Scanner(System.in);
+        double length = sc1.nextDouble();
+        System.err.println("choose height");
+        Scanner sc2 = new Scanner(System.in);
+        double height = sc2.nextDouble();
+        Rectangle rectangle = new Rectangle(length, height);
+        System.out.println(rectangle);
+
     }
 
     public static void ClassWork28082026() {
@@ -100,5 +110,40 @@ public class Class {
             TotalBuyers = TotalBuyers + 1;
 
         }
+    }
+
+    public static void ActivityDSA() {
+        LinkedList alunos = new LinkedList();
+
+        // 01 - Criar uma lista com 5 alunos
+        alunos.add("Maria");
+        alunos.add("Joao");
+        alunos.add("Felipe");
+        alunos.add("Amanda");
+        alunos.add("Pedro Henrique");
+
+        // a) Listar todos os nomes
+        System.out.println("Alunos da turma:");
+        alunos.print();
+
+        // c) Remover o 5º registro
+        // Índices começam em 0, então o 5º elemento é o índice 4.
+        alunos.remove(4);
+        System.out.println("\nPedro Henrique foi removido da lista.");
+
+        // d) Adicionar o nome da professora
+        alunos.add("Karina");
+
+        // e) Verificar se o seu nome está na lista
+        if (alunos.contains("Pedro Henrique")) {
+            System.out.println("\nPedro Henrique está na lista.");
+        } else {
+            System.out.println("\nPedro Henrique não está na lista.");
+        }
+
+        // Lista final
+        System.out.println("\nLista final:");
+        alunos.print();
+
     }
 }

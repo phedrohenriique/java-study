@@ -1,5 +1,5 @@
 package poo.Entities;
-
+// lista 2 exercicios
 import java.lang.Math;
 
 public class Rectangle {
@@ -44,7 +44,7 @@ public class Rectangle {
 
     @Override
     public String toString(){
-       return "Area = "+getArea()+"\n Perímetro = "+getPerimeter()+"\n Diagonal = "+getDiagonal();
+       return "Area = "+getArea()+"\nPerímetro = "+getPerimeter()+"\nDiagonal = "+getDiagonal();
     }
 
 }
