@@ -7,7 +7,7 @@ public class DoubleLinkedList {
 
     int listLength;
     ArrayList<Node> doubledLinkedList = new ArrayList<Node>();
-
+    
     public DoubleLinkedList(){
         this.listLength = doubledLinkedList.size();
     }
